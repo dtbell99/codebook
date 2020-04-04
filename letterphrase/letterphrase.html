@@ -1,0 +1,62 @@
+<!doctype HTML>
+<html>
+<style>
+    td {
+        padding: 10px;
+    }
+
+    body {
+        padding: 25px;
+        border: .2em solid #f1f1f1;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <h1>Phrase Tester</h1>
+    <i>Does your sentence use all the letters?</i>
+    <br /><br />
+    <input type="text" id="testText" style="width:500px" placeholder="the quick brown fox jumps over the lazy dog"
+        onkeyup="test()" />
+    <br /><br />
+    <table id="lettertable">
+    </table>
+    <br />
+    <div id="totalfound"></div>
+</body>
+
+<script>
+
+    let letters = Array.from("abcdefghijklmnopqrstuvwxyz");
+
+    function updateLetterBorder(color, ltr) {
+        document.getElementById(ltr).style = "border:" + color + " solid .1em; border-radius:8px;";
+    }
+
+    function test() {
+        let phrase = document.getElementById('testText').value.toLowerCase();
+        let found = 0;
+        letters.forEach(ltr => {
+            if (phrase.indexOf(ltr) > -1) {
+                updateLetterBorder('red', ltr);
+                found++;
+            } else {
+                updateLetterBorder('#f1f1f1', ltr);
+            }
+        });
+        document.getElementById('totalfound').innerHTML = found + '/' + letters.length + ' found';
+    }
+
+    let tableData = "";
+    tableData = tableData + "<tr>";
+    letters.forEach(ltr => {
+        let td = "<td id='" + ltr + "'>" + ltr + "</td>";
+        tableData = tableData + td;
+    });
+    tableData = tableData + "</tr>";
+    document.getElementById("lettertable").innerHTML = tableData;
+    document.getElementById('testText').focus();
+
+</script>
+
+</html>

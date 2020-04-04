@@ -1,0 +1,43 @@
+body {
+    padding: 10px;
+}
+
+.app {
+    padding: 20px;
+}
+
+.question {
+    padding: 10px;
+    font-size: 30pt;
+    font-family: arial;
+    width: 100px;
+    text-align: right;
+}
+
+.timer {
+    font-size: 20px;
+    font-family: arial;
+    padding: 5px;
+    text-align: left;
+}
+
+.correct {
+    font-size: 30px;
+    font-family: arial;
+    padding: 5px;
+    text-align: left;
+    color: green;
+}
+
+.wrong {
+    font-size: 30px;
+    font-family: arial;
+    padding: 5px;
+    text-align: left;
+    color: red;
+}
+
+.box50 {
+    width: 50%;
+    float: left;
+}

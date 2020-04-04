@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="fastmath.css" />
+</head>
+
+<body>
+    <h3>FastMath</h3>
+    <hr />
+    <div class="app">
+        <input type="text" id="name" placeholder="What is your name?" />
+        &nbsp;&nbsp;
+        <button id="timerButton" onclick="startTimer()" class="btn btn-secondary">Start Game</button>
+        <div class="question" id="question">
+            ?<br />+?
+            <hr />
+        </div>
+        <input type="number" id="guess" onent />
+        <button onclick="makeGuess()" class="btn btn-primary" id="guessButton"
+            placeholder="Use enter key to guess">Guess</button>
+        <br />
+        <br />
+        <hr />
+        <div class="box50">
+            <div id="timer" class="timer"></div>
+            <div class="correct box50" id="correct">0</div>
+            <div class="wrong box50" id="wrong">0</div>
+        </div>
+        <div class="box50">
+            <b>Scores</b>
+            <div class="scores" id="scores">
+            </div>
+        </div>
+    </div>
+    <script src="fastmath.js"></script>
+</body>
+
+</html>
