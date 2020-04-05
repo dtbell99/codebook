@@ -1,25 +1,31 @@
 <!doctype HTML>
 <html>
-<style>
-    td {
-        padding: 10px;
-    }
 
-    body {
-        padding: 25px;
-        border: .2em solid #f1f1f1;
-        border-radius: 8px;
-    }
-</style>
+<head>
+    <link rel="stylesheet" href="../sketchy.css" />
+    <style>
+        td {
+            padding: 25px;
+            text-align: center;
+        }
+
+        body {
+            padding: 25px;
+            border: .2em solid #f1f1f1;
+            border-radius: 8px;
+            margin: 10px;
+        }
+    </style>
+</head>
 
 <body>
     <h1>Phrase Tester</h1>
     <i>Does your sentence use all the letters?</i>
     <br /><br />
-    <input type="text" id="testText" style="width:500px" placeholder="the quick brown fox jumps over the lazy dog"
-        onkeyup="test()" />
+    <input type="text" id="testText" style="width:500px" class="form-control"
+        placeholder="the quick brown fox jumps over the lazy dog" onkeyup="test()" />
     <br /><br />
-    <table id="lettertable">
+    <table id="lettertable" class="table table-bordered">
     </table>
     <br />
     <div id="totalfound"></div>
@@ -29,8 +35,8 @@
 
     let letters = Array.from("abcdefghijklmnopqrstuvwxyz");
 
-    function updateLetterBorder(color, ltr) {
-        document.getElementById(ltr).style = "border:" + color + " solid .1em; border-radius:8px;";
+    function updateLetterBorder(color, ltr, background, txtColor) {
+        document.getElementById(ltr).style = "background-color:" + background + '; color:' + txtColor + ';';
     }
 
     function test() {
@@ -38,7 +44,7 @@
         let found = 0;
         letters.forEach(ltr => {
             if (phrase.indexOf(ltr) > -1) {
-                updateLetterBorder('red', ltr);
+                updateLetterBorder('green', ltr, '#6ad8bc', 'white');
                 found++;
             } else {
                 updateLetterBorder('#f1f1f1', ltr);

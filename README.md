@@ -1,9 +1,9 @@
 # CodeBook
 Games and examples for the CodeBook can be found here.
 
-<img src="./fastmath/screenshot.png" width="300px"/>
+<img src="./fastmath/screenshot2.png" width="300px"/>
 <hr/>
-<img src="./letterphrase/screenshot.png" width="300px"/>
+<img src="./letterphrase/screenshot2.png" width="300px"/>
 
 
 
