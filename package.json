@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "http-server .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtbell99/codebook.git"
@@ -17,7 +13,5 @@
     "url": "https://github.com/dtbell99/codebook/issues"
   },
   "homepage": "https://github.com/dtbell99/codebook#readme",
-  "devDependencies": {
-    "http-server": "^0.12.1"
-  }
+  "devDependencies": {}
 }
