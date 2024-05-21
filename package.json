@@ -1,6 +1,6 @@
 {
   "name": "codebook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "repository": {
@@ -8,10 +8,9 @@
     "url": "git+https://github.com/dtbell99/codebook.git"
   },
   "author": "David Bell",
-  "license": "IT",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dtbell99/codebook/issues"
   },
   "homepage": "https://github.com/dtbell99/codebook#readme",
-  "devDependencies": {}
 }
